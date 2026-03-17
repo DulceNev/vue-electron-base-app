@@ -9,9 +9,12 @@ if (started) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
+    width: 600,
     height: 600,
     autoHideMenuBar: true,
+    // poner transparente
+    // backgroundColor: '#00000000',
+    // backgroundMaterial: 'acrylic',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -27,7 +30,7 @@ const createWindow = () => {
   }
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
